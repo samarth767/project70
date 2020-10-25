@@ -1,0 +1,74 @@
+import React from 'react';
+import {Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { Header } from 'react-native-elements';
+
+export default class WriteStory extends React.Component{
+    render(){
+        return(
+            <View style={styles.container}>
+          <Header
+          backgroundColor={'red'}
+          centerComponent={{
+            text: 'Story Hub',
+            style: { color: '#0000', fontSize: 30 },
+          }}
+        />
+        <TextInput
+        style = {styles.inputBox}
+        placeholder = 'Story Title'
+        />
+     <TextInput
+        style = {styles.inputBox}
+        placeholder = 'Author'
+        />
+     <TextInput
+        style = {styles.inputBox1}
+        placeholder = 'Write Your Story'
+        />
+         <TouchableOpacity 
+              style={styles.submitButton}>
+              <Text style={styles.buttonText}>Submit</Text>
+        </TouchableOpacity>
+        </View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+    inputBox:{
+        width : 180,
+        height: 50,
+        margin : 20,
+        borderWidth: 1.5,
+        borderRightWidth: 1,
+        fontSize: 20,
+        alignSelf :'center',
+        textAlign : 'center'
+      },
+      inputBox1:{
+        width : 380,
+        height: 250,
+        margin : 20,
+        borderWidth: 1.5,
+        borderRightWidth: 1,
+        fontSize: 20,
+        alignSelf :'center',
+        textAlign : 'center'
+      },
+      submitButton:{
+        backgroundColor: '#2196F3',
+        padding: 10,
+        margin: 10,
+        width: 80,
+        height: 40,
+        alignSelf: 'center'
+      },
+      buttonText:{
+        fontSize: 15,
+        textAlign: 'center',
+      },
+});
